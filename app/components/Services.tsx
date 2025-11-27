@@ -1,86 +1,62 @@
+"use client";
+
 export default function Services() {
   return (
-    <section id="services" className="w-full py-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Nuestros <span className="text-teal-400">Servicios</span>
+    <section id="services" className="py-28 bg-gray-100 text-black">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-center mb-12">
+          Nuestros <span className="text-teal-500">Servicios</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-
-          {/* Servicio 1 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
-            <h3 className="text-xl font-bold mb-3">Desarrollo Web</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Webs corporativas</li>
-              <li>• Landing pages</li>
-              <li>• Portafolios</li>
-              <li>• Ecommerce</li>
-              <li>• Blogs</li>
-            </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-bold mb-3">Páginas Web Profesionales</h3>
+            <p>
+              Creamos sitios modernos, rápidos y adaptados a celulares para
+              empresas, negocios y profesionales.
+            </p>
           </div>
 
-          {/* Servicio 2 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
-            <h3 className="text-xl font-bold mb-3">Diseño Profesional</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Diseño moderno</li>
-              <li>• Responsive</li>
-              <li>• Rediseño web</li>
-              <li>• Optimización UX/UI</li>
-              <li>• Branding visual</li>
-            </ul>
-          </div>
-
-          {/* Servicio 3 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-bold mb-3">Tiendas Online</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Webpay / MercadoPago</li>
-              <li>• Catálogo productos</li>
-              <li>• Carrito compras</li>
-              <li>• Panel administrador</li>
-            </ul>
+            <p>
+              Vende por internet con carrito de compras, pagos online y panel
+              de administración.
+            </p>
           </div>
 
-          {/* Servicio 4 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-bold mb-3">Diseño UX/UI</h3>
+            <p>
+              Interfaces atractivas, claras y enfocadas en convertir visitas
+              en clientes.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-bold mb-3">Posicionamiento SEO</h3>
+            <p>
+              Optimización para aparecer en Google y atraer más personas a tu
+              negocio.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-bold mb-3">Mantenimiento Web</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Actualizaciones</li>
-              <li>• Seguridad</li>
-              <li>• Respaldo</li>
-              <li>• Soporte técnico</li>
-              <li>• Optimización velocidad</li>
-            </ul>
+            <p>
+              Nos encargamos de actualizaciones, seguridad y soporte técnico.
+            </p>
           </div>
 
-          {/* Servicio 5 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
-            <h3 className="text-xl font-bold mb-3">Optimización SEO</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Posicionamiento Google</li>
-              <li>• Textos optimizados</li>
-              <li>• Indexación</li>
-              <li>• Velocidad web</li>
-            </ul>
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-bold mb-3">Desarrollo a Medida</h3>
+            <p>
+              Creamos sistemas web personalizados para empresas.
+            </p>
           </div>
-
-          {/* Servicio 6 */}
-          <div className="border border-neutral-800 rounded-2xl p-6 hover:border-teal-400 transition">
-            <h3 className="text-xl font-bold mb-3">Marketing Digital</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>• Redes sociales</li>
-              <li>• Pixel Meta</li>
-              <li>• Google Analytics</li>
-              <li>• Embudos de venta</li>
-              <li>• Email marketing</li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </section>
   );
 }
+

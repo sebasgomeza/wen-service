@@ -1,53 +1,98 @@
+"use client";
+
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 export default function Packages() {
+  const packages = [
+    {
+      name: "Básico",
+      price: "$79.990",
+      features: [
+        "Landing Page",
+        "Diseño Responsive",
+        "Formulario de contacto",
+        "Optimización básica SEO",
+      ],
+      route: "/paquetes/basico",
+    },
+    {
+      name: "Profesional",
+      price: "$149.990",
+      features: [
+        "Web Corporativa",
+        "Hasta 5 secciones",
+        "SEO avanzado",
+        "Velocidad optimizada",
+        "Integración WhatsApp",
+      ],
+      highlight: true,
+      route: "/paquetes/pro",
+    },
+    {
+      name: "Premium",
+      price: "$249.990",
+      features: [
+        "Tienda Online",
+        "Pagos integrados",
+        "Panel administrador",
+        "Correos automáticos",
+        "Soporte 30 días",
+      ],
+      route: "/paquetes/premium",
+    },
+  ];
+
   return (
-    <section id="packages" className="w-full py-24 bg-[#050505] text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+    <section id="packages" className="py-24 bg-[#0a0a0a]">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-12"
+        >
           Nuestros <span className="text-teal-400">Paquetes</span>
-        </h2>
+        </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {packages.map((pkg, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              className={`rounded-xl border p-8 ${
+                pkg.highlight
+                  ? "bg-teal-500 text-black border-teal-400"
+                  : "bg-neutral-900 border-gray-800 text-white"
+              }`}
+            >
+              <h3 className="text-2xl font-bold mb-4">{pkg.name}</h3>
+              <p className="text-3xl font-extrabold mb-6">{pkg.price}</p>
 
-          {/* Paquete Básico */}
-          <div className="border border-neutral-800 rounded-2xl p-8 hover:border-teal-400 transition">
-            <h3 className="text-2xl font-bold mb-4">Básico</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>✅ Landing Page</li>
-              <li>✅ Diseño responsive</li>
-              <li>✅ Botón WhatsApp</li>
-              <li>✅ Dominio gratis 1 año*</li>
-              <li>✅ Hosting básico</li>
-            </ul>
-            <p className="mt-6 text-xl font-bold text-teal-400">$99.990 CLP</p>
-          </div>
+              <ul className="space-y-3 text-sm mb-8">
+                {pkg.features.map((feature, idx) => (
+                  <li key={idx}>✔ {feature}</li>
+                ))}
+              </ul>
 
-          {/* Paquete Profesional */}
-          <div className="border border-teal-400 rounded-2xl p-8 hover:scale-105 transition">
-            <h3 className="text-2xl font-bold mb-4">Profesional</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>✅ Web corporativa</li>
-              <li>✅ Hasta 5 secciones</li>
-              <li>✅ SEO básico</li>
-              <li>✅ WhatsApp + Formulario</li>
-              <li>✅ Dominio + Hosting</li>
-            </ul>
-            <p className="mt-6 text-xl font-bold text-teal-400">$189.990 CLP</p>
-          </div>
-
-          {/* Paquete Ecommerce */}
-          <div className="border border-neutral-800 rounded-2xl p-8 hover:border-teal-400 transition">
-            <h3 className="text-2xl font-bold mb-4">Ecommerce</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>✅ Tienda online</li>
-              <li>✅ Carrito de compras</li>
-              <li>✅ Webpay / MercadoPago</li>
-              <li>✅ Catálogo productos</li>
-              <li>✅ Panel administrador</li>
-            </ul>
-            <p className="mt-6 text-xl font-bold text-teal-400">$349.990 CLP</p>
-          </div>
-
+              <Link href={pkg.route}>
+                <button
+                  className={`w-full py-3 rounded-lg font-bold transition ${
+                    pkg.highlight
+                      ? "bg-black text-white hover:bg-neutral-900"
+                      : "bg-teal-500 text-black hover:bg-teal-400"
+                  }`}
+                >
+                  Ver paquete
+                </button>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
