@@ -30,29 +30,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
 
         {/* Footer SIEMPRE abajo */}
-        <footer className="border-t border-neutral-800 py-10 px-6">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 text-sm text-gray-400">
+        <footer className="bg-black border-t border-gray-800 py-6">
+  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
+    <div>
+      © {new Date().getFullYear()} WenService — Todos los derechos reservados  
+      <br />
+      contacto@wenservice.cl · +56 9 0000 0000
+    </div>
 
-            <div className="flex items-center gap-3">
-              <img
-                src="/wen-service.jpeg"
-                alt="Wen Service"
-                className="w-8 h-8 rounded"
-              />
-              <div>
-                <p className="font-semibold text-white">Wen Service</p>
-                <p>© 2025 Wen Service. Todos los derechos reservados.</p>
-              </div>
-            </div>
+    <div className="flex gap-4">
+      {/* Facebook */}
+      <div className="w-9 h-9 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition cursor-pointer">
+        <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
+          <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .1 2 .1v2.2h-1.2c-1.2 0-1.6.8-1.6 1.6V12H18l-.4 3h-2.6v7A10 10 0 0 0 22 12Z"/>
+        </svg>
+      </div>
 
-            <div className="md:text-right">
-              <p>Contacto: hola@wenservice.cl</p>
-              <p>+56 9 0000 0000</p>
-            </div>
+      {/* Instagram */}
+      <div className="w-9 h-9 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition cursor-pointer">
+        <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
+          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7Zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10Zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm4.5-.6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z"/>
+        </svg>
+      </div>
 
-          </div>
-        </footer>
+      {/* WhatsApp */}
+      <div className="w-9 h-9 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition cursor-pointer">
+        <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
+          <path d="M20 3.9A9.9 9.9 0 0 0 12.1 0 10 10 0 0 0 2 10c0 1.8.5 3.6 1.4 5.1L2 24l9-2.3a10 10 0 0 0 10-17.8ZM12 20a8 8 0 0 1-4-1.1l-.3-.2L4.8 19l.9-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.7c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.7.8-.9 1-.3.2-.5.1a6.9 6.9 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.4.1-.2 0-.4-.1-.5l-.8-1.9c-.2-.4-.3-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 5 4.2 2.5 1 3 1.1 4.1.9.7-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1Z"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
         <WhatsAppButton />
+        
 
 
       </body>

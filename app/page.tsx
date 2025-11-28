@@ -12,6 +12,7 @@ import Clientes from "./components/clientes"
 import FAQ from "./components/FAQ"
 
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-neutral-900 to-black text-gray-100 antialiased">
@@ -30,32 +31,22 @@ export default function Home() {
             </div>
 
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-              <a href="#services" className="hover:text-teal-300">Servicios</a>
-              <a href="#packages" className="hover:text-teal-300">Paquetes</a>
-              <a href="#portfolio" className="hover:text-teal-300">Portafolio</a>
-              <a href="#about" className="hover:text-teal-300">Sobre Nosotros</a>
-              <a href="#contact" className="hover:text-teal-300">Contacto</a>
-              <a href="#contact" className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold">
-  Solicitar Presupuesto
-</a>
-<a
-  href="https://wa.me/56950445052"
-  target="_blank"
-  className="bg-green-500 text-black px-8 py-4 rounded-xl font-bold"
->
-  Contratar
-</a>
-<Link
-  href="/proyectos"
-  className="mt-4 inline-block w-full text-center bg-teal-500 text-black px-5 py-2 rounded-lg font-bold hover:bg-teal-400 transition"
->
-  Ver proyecto
-</Link>
+  <a href="#services" className="hover:text-teal-300 transition">Servicios</a>
+  <a href="#packages" className="hover:text-teal-300 transition">Paquetes</a>
+  <a href="#portfolio" className="hover:text-teal-300 transition">Portafolio</a>
+  <a href="#about" className="hover:text-teal-300 transition">Sobre Nosotros</a>
+  <a href="#contact" className="hover:text-teal-300 transition">Contacto</a>
+   {/* BOTÓN WHATSAPP HEADER */}
+  <a
+    href="https://wa.me/56950445052"
+    target="_blank"
+    className="ml-4 bg-green-500 hover:bg-green-400 text-black px-6 py-3 rounded-xl font-bold transition"
+  >
+    WhatsApp
+  </a>
 
+</nav>
 
-
-
-            </nav>
           </div>
         </div>
       </header>
@@ -81,72 +72,49 @@ export default function Home() {
 
   {/* Contenido encima */}
   <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-    <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-      Creamos sitios web que <span className="text-teal-400">venden</span>
-    </h1>
+  <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+    Creamos sitios web que{" "}
+    <span className="text-teal-400">
+      transforman visitas en clientes
+    </span>
+  </h1>
 
-    <p className="mt-6 text-gray-200 text-lg max-w-2xl mx-auto">
-      Diseño profesional, tiendas online, posicionamiento en Google y soluciones digitales completas para tu negocio.
-    </p>
+  <p className="mt-6 text-gray-200 text-lg max-w-2xl mx-auto">
+    Diseño profesional, tiendas online y posicionamiento en Google — entregamos
+    soluciones listas para vender.
+  </p>
 
-    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="#contact"
-        className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-8 py-3 rounded-lg transition"
-      >
-        Solicitar Presupuesto
-      </a>
+  <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+    <a
+      href="#packages"
+      className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-8 py-3 rounded-lg transition"
+    >
+      Ver Planes
+    </a>
 
-      <a
-        href="#portfolio"
-        className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-lg transition"
-      >
-        Ver Portafolio
-      </a>
+    <a
+      href="#contact"
+      className="border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-lg transition"
+    >
+      Cotizar mi web
+    </a>
+  </div>
+
+  <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+    <div className="px-4 py-2 bg-neutral-800 rounded-lg">
+       Entregas rápidas
+    </div>
+    <div className="px-4 py-2 bg-neutral-800 rounded-lg">
+       Soporte y seguridad
+    </div>
+    <div className="px-4 py-2 bg-neutral-800 rounded-lg">
+       Optimizado para vender
     </div>
   </div>
+</div>
+
 
 </motion.section>
-
-
-        {/* Hero */}
-        <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
-
-  {/* Fondo con degradado */}
-  <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-900 to-teal-950" />
-
-  {/* Contenido */}
-  <div className="relative z-10 text-center max-w-4xl px-6">
-    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-  Impulsa tu negocio con una <br />
-  <span className="text-cyan-400">Página Web Profesional</span> 
-  <br /> que realmente vende
-</h1>
-
-
-    <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl">
-Creamos páginas web modernas, rápidas y optimizadas para que consigas más clientes,
-vendas más y hagas crecer tu negocio en internet sin depender de terceros.
-</p>
-
-
-    <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="#contact"
-        className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-8 py-3 rounded-lg transition"
-      >
-        Solicitar Presupuesto
-      </a>
-
-      <a
-        href="#services"
-        className="border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition"
-      >
-        Ver Servicios
-      </a>
-    </div>
-  </div>
-</section>
 
           {/* Servicios */}
   <Services />
@@ -156,71 +124,80 @@ vendas más y hagas crecer tu negocio en internet sin depender de terceros.
   <Testimonials />
   <Clientes />
   <FAQ />
+  
+
 
 
 
         
       </main>
-      <section id="about" className="max-w-6xl mx-auto px-6 lg:px-8 py-28">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <section id="about" className="py-28 bg-white text-black">
+  <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-    {/* Texto */}
+    {/* COLUMNA TEXTO */}
     <div>
       <h2 className="text-4xl font-extrabold mb-6">
-        Sobre <span className="text-teal-400">Nosotros</span>
+        Sobre <span className="text-teal-500">Nosotros</span>
       </h2>
 
-      <p className="text-gray-300 mb-6 leading-relaxed">
-        Somos un equipo especializado en el desarrollo de soluciones digitales
-        modernas. Creamos sitios web rápidos, optimizados y orientados a ventas
-        para emprendedores, empresas y marcas personales.
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        Somos una agencia digital especializada en el diseño y desarrollo de
+        sitios web profesionales, tiendas online y soluciones digitales para
+        empresas y emprendedores en Chile.
       </p>
 
-      <p className="text-gray-400 mb-8 leading-relaxed">
-        Nuestro enfoque está en el diseño profesional, la experiencia de usuario,
-        el posicionamiento en Google y la conversión de visitas en clientes reales.
+      <p className="text-gray-500 mb-8 leading-relaxed">
+        Nuestro enfoque está en la conversión, el diseño moderno, la velocidad
+        de carga, el posicionamiento en Google y la experiencia del usuario.
+        Creamos sitios pensados para vender.
       </p>
 
-      <a
-        href="#contact"
-        className="inline-block bg-teal-500 hover:bg-teal-400 text-black font-semibold px-6 py-3 rounded-lg transition"
-      >
-        Contáctanos
-      </a>
+      <div className="flex gap-4">
+        <a
+          href="#contact"
+          className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-6 py-3 rounded-lg transition"
+        >
+          Contáctanos
+        </a>
+
+        <a
+          href="#portfolio"
+          className="border border-black text-black hover:bg-black hover:text-white px-6 py-3 rounded-lg transition"
+        >
+          Ver trabajos
+        </a>
+      </div>
     </div>
 
-    {/* Tarjetas de valores */}
+    {/* COLUMNA TARJETAS */}
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-      <div className="bg-[#0f172a] border border-gray-800 shadow-xl hover:shadow-2xl transition rounded-2xl p-6"
->
-        <h3 className="text-lg font-bold mb-2">🚀 Experiencia</h3>
-        <p className="text-sm text-gray-400">
-          Trabajamos con las mejores tecnologías del mercado.
+      <div className="bg-white border border-gray-200 shadow-lg rounded-2xl p-6">
+        <h3 className="text-lg font-bold mb-2"> Experiencia</h3>
+        <p className="text-sm text-gray-500">
+          Años desarrollando proyectos digitales para distintos rubros.
         </p>
       </div>
 
-      <div className="bg-[#0f172a] border border-gray-800 shadow-xl hover:shadow-2xl transition rounded-2xl p-6"
->
-        <h3 className="text-lg font-bold mb-2">🎯 Resultados</h3>
-        <p className="text-sm text-gray-400">
-          Nuestros sitios están pensados para convertir.
+      <div className="bg-white border border-gray-200 shadow-lg rounded-2xl p-6">
+        <h3 className="text-lg font-bold mb-2"> Enfoque en ventas</h3>
+        <p className="text-sm text-gray-500">
+          Cada sitio está diseñado para convertir visitas en clientes.
         </p>
       </div>
 
-      <div className="bg-[#0f172a] border border-gray-800 shadow-xl hover:shadow-2xl transition rounded-2xl p-6"
->
-        <h3 className="text-lg font-bold mb-2">📱 Diseño Responsive</h3>
-        <p className="text-sm text-gray-400">
-          Perfecto en celular, tablet y computador.
+      <div className="bg-white border border-gray-200 shadow-lg rounded-2xl p-6">
+        <h3 className="text-lg font-bold mb-2"> 100% Responsive</h3>
+        <p className="text-sm text-gray-500">
+          Perfecto en celulares, tablets y computadores.
         </p>
       </div>
 
-      <div className="bg-[#0f172a] border border-gray-800 shadow-xl hover:shadow-2xl transition rounded-2xl p-6"
->
-        <h3 className="text-lg font-bold mb-2">🔒 Seguridad</h3>
-        <p className="text-sm text-gray-400">
-          Protección, respaldo y optimización incluidos.
+      <div className="bg-white border border-gray-200 shadow-lg rounded-2xl p-6">
+        <h3 className="text-lg font-bold mb-2"> Seguridad</h3>
+        <p className="text-sm text-gray-500">
+          Protección, respaldo y soporte incluidos.
         </p>
       </div>
 
@@ -228,6 +205,7 @@ vendas más y hagas crecer tu negocio en internet sin depender de terceros.
 
   </div>
 </section>
+
 {/* Contacto */}
 <section
   id="contact"

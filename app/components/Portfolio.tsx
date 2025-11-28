@@ -7,32 +7,32 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Tienda Online de Tecnología",
-      desc: "Ecommerce con pagos integrados y panel administrador.",
+      desc: "Ecommerce moderno con pagos integrados, carrito de compras y panel administrador.",
       image: "/proyecto1.jpg",
     },
     {
       title: "Landing Page Inmobiliaria",
-      desc: "Página de ventas optimizada para conversiones.",
+      desc: "Página de ventas optimizada para convertir visitas en clientes potenciales.",
       image: "/proyecto2.jpg",
     },
     {
-      title: "Web Corporativa Empresa",
-      desc: "Sitio profesional institucional.",
+      title: "Web Corporativa Empresarial",
+      desc: "Sitio institucional profesional para fortalecer la presencia digital.",
       image: "/proyecto3.jpg",
     },
     {
       title: "Sistema de Reservas",
-      desc: "Aplicación web para gestión de reservas.",
+      desc: "Aplicación web para agendamiento de horas y control de clientes.",
       image: "/proyecto4.jpg",
     },
     {
       title: "Portafolio Creativo",
-      desc: "Portafolio moderno para diseñador.",
+      desc: "Portafolio moderno diseñado para destacar trabajos creativos.",
       image: "/proyecto5.jpg",
     },
     {
-      title: "Tienda de Ropa",
-      desc: "Ecommerce de moda con carrito y pagos.",
+      title: "Tienda Online de Ropa",
+      desc: "Ecommerce de moda con pagos en línea, catálogo dinámico y envíos.",
       image: "/proyecto6.jpg",
     },
   ];
@@ -40,8 +40,6 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-28 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Título */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,11 +50,10 @@ export default function Portfolio() {
         </motion.h2>
 
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Algunos de los proyectos que hemos desarrollado para nuestros clientes.
+          Algunos de los proyectos que hemos desarrollado con calidad profesional.
         </p>
 
-        {/* GRID ORDENADO */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -64,33 +61,30 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
               whileHover={{ scale: 1.03 }}
-              className="bg-neutral-900 rounded-xl shadow-lg flex flex-col overflow-hidden"
+              className="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-neutral-800 hover:border-cyan-400 transition-all duration-300 flex flex-col"
             >
-              
               {/* Imagen */}
-              <div className="relative w-full h-56 overflow-hidden">
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    sizes="100%"
-    className="object-cover"
-  />
-</div>
+              <div className="relative w-full h-56">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
+              {/* Contenido */}
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 text-sm mb-6">
+                    {project.desc}
+                  </p>
+                </div>
 
-              {/* Texto y botón */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-
-                <p className="text-gray-400 text-sm mb-4">
-                  {project.desc}
-                </p>
-
-                {/* Botón pegado abajo */}
                 <a
                   href="#contact"
-                  className="mt-auto inline-block w-full text-center bg-teal-500 text-black px-5 py-2 rounded-lg font-bold hover:bg-teal-400 transition"
+                  className="inline-block w-full text-center bg-cyan-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-cyan-300 transition"
                 >
                   Ver proyecto
                 </a>

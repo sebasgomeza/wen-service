@@ -1,23 +1,72 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function WhatsappButton() {
+export default function ChatButton() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Link
-      href="https://wa.me/56950445052"
-      target="_blank"
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition flex items-center justify-center"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        fill="currentColor"
-        viewBox="0 0 16 16"
+    <>
+      {/* BOTÓN FLOTANTE */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed bottom-6 right-6 z-50 bg-teal-500 hover:bg-teal-400 text-black p-4 rounded-full shadow-xl text-xl"
       >
-        <path d="M13.601 2.326A7.874 7.874 0 0 0 8.004 0C3.589 0 0 3.582 0 8.003c0 1.412.37 2.79 1.071 4.02L0 16l4.078-1.07A7.978 7.978 0 0 0 8.004 16C12.42 16 16 12.418 16 8.003a7.962 7.962 0 0 0-2.399-5.677zM8.004 14.51a6.49 6.49 0 0 1-3.313-.91l-.237-.14-2.421.635.647-2.359-.154-.242a6.482 6.482 0 1 1 5.478 2.016zm3.615-4.927c-.197-.1-1.17-.577-1.35-.642-.18-.066-.311-.1-.442.1-.13.197-.507.642-.622.774-.115.13-.23.148-.426.049-.197-.1-.832-.307-1.585-.98-.586-.522-.98-1.168-1.095-1.364-.115-.197-.012-.303.087-.403.089-.089.197-.23.296-.345.099-.115.132-.197.197-.327.066-.13.033-.247-.016-.345-.05-.099-.442-1.065-.606-1.458-.16-.385-.323-.332-.442-.338-.115-.007-.247-.009-.38-.009a.73.73 0 0 0-.525.247c-.18.197-.688.673-.688 1.64 0 .968.705 1.903.803 2.035.099.131 1.387 2.12 3.36 2.974.47.203.836.324 1.12.415.471.15.9.129 1.238.078.378-.056 1.17-.478 1.336-.94.165-.461.165-.857.115-.94-.05-.082-.18-.131-.378-.23z" />
-      </svg>
-    </Link>
+        💬
+      </button>
+
+      {/* VENTANA DE CHAT */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            className="fixed bottom-24 right-6 z-50 w-80 bg-neutral-900 border border-neutral-800 rounded-xl shadow-2xl overflow-hidden"
+          >
+            {/* HEADER */}
+            <div className="bg-teal-500 text-black p-4 font-bold">
+              Chat de Ayuda
+            </div>
+
+            {/* MENSAJES */}
+            <div className="p-4 space-y-3 text-sm text-gray-300">
+              <div className="bg-neutral-800 p-3 rounded-lg">
+                👋 ¡Hola! Soy el asistente de WenService.<br />
+                ¿En qué te puedo ayudar?
+              </div>
+            </div>
+
+            {/* BOTONES */}
+            <div className="p-4 grid grid-cols-2 gap-3">
+              <a
+                href="#packages"
+                onClick={() => setOpen(false)}
+                className="bg-teal-500 hover:bg-teal-400 text-black text-center py-2 rounded-lg font-semibold"
+              >
+                Precios
+              </a>
+
+              <a
+                href="#services"
+                onClick={() => setOpen(false)}
+                className="bg-teal-500 hover:bg-teal-400 text-black text-center py-2 rounded-lg font-semibold"
+              >
+                Servicios
+              </a>
+
+              <a
+                href="#portfolio"
+                onClick={() => setOpen(false)}
+                className="bg-teal-500 hover:bg-teal-400 text-black text-center py-2 rounded-lg font-semibold col-span-2"
+              >
+                Ver Portafolio
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
