@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <div>
       © {new Date().getFullYear()} WenService — Todos los derechos reservados  
       <br />
-      contacto@wenservice.cl · +56 9 0000 0000
+      wenservice@cl.service.cl · +56 9 7637 3307
     </div>
 
     <div className="flex gap-4">

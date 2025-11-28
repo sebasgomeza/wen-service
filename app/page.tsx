@@ -38,7 +38,7 @@ export default function Home() {
   <a href="#contact" className="hover:text-teal-300 transition">Contacto</a>
    {/* BOTÓN WHATSAPP HEADER */}
   <a
-    href="https://wa.me/56950445052"
+    href="https://wa.me/56976373307"
     target="_blank"
     className="ml-4 bg-green-500 hover:bg-green-400 text-black px-6 py-3 rounded-xl font-bold transition"
   >
